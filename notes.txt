@@ -1,27 +1,26 @@
-datatypes  
 
+datatypes  
+______________________________________________________________________________________________________________________________________________________________________
 var
 example : var name = "Nemis";
 if variable without value than , assigned value is undefined
-
+______________________________________________________________________________________________________________________________________________________________________
 const 
 example : const PI = 3.14
 constant value
-
+______________________________________________________________________________________________________________________________________________________________________
 let 
 example : let name = "Nemis"
-
+______________________________________________________________________________________________________________________________________________________________________
 let v/s var
 var : declares function scoped values
 let : declares variables , scoped at block-level{}
 unlike var,a let variable cannot be re-declared within its scope
-
-
+______________________________________________________________________________________________________________________________________________________________________
 operators 
 arithmetic : + - * / %
 assignment : = , += , -= , *= , /= , %=
-
-
+______________________________________________________________________________________________________________________________________________________________________
 String
 var name = "Nemis"
 var text = "Mars is known as \"Red Plannet\"";
@@ -29,31 +28,26 @@ prints like : Mars is known as "Red Plannet"
 length of String : text.length
 for upper case : text.toUpperCase() \\hello to HELLO
 for lower case : text.toLoweCase() \\HELLO to hello
-
+______________________________________________________________________________________________________________________________________________________________________
 Escape sequences
-
 \' : JS escape quotes (single)
 \" : JS escape quotes (double)
 \n : New line character
 \t : tabspace
 \r : cariage-return  //exaplaination in php book
 \b : backspace character
-
-
+______________________________________________________________________________________________________________________________________________________________________
 Number.MAX_VALUE : To print max value of Number ex.1.7976931348623157e+308
 Number.MIN_VALUE : To print min value of Number ex.5e-324
-
-
+______________________________________________________________________________________________________________________________________________________________________
 Datatype conversion 
 any to int : parseInt() 
 any to float : parseFloat()
 any to String : toString()
-
-
+______________________________________________________________________________________________________________________________________________________________________
 Boolean
 True , False
-
-
+______________________________________________________________________________________________________________________________________________________________________
 Array
 syntax : var arr_nm = [v1,v2,v3]
 Array length : arr_nm.length()
@@ -68,4 +62,183 @@ for concate 2 arrays : concat()
             example : var number = [1,2,3,4]
                       var lastnumber = [5,6,7,8]
                       number.concat(lastnumber)
-                      
+______________________________________________________________________________________________________________________________________________________________________Null datatype             
+syntax : var var_nm = null;
+______________________________________________________________________________________________________________________________________________________________________
+undefined
+if variable's value is not defined then value is undefined
+______________________________________________________________________________________________________________________________________________________________________
+Object datatype 
+->complex datatype
+->used to sotre collection of data
+
+contains : properties in form of key-value pair
+
+syntax : var obj_nm = {
+    k1:v1,
+    k2:v2
+};
+Ex. : var user = {
+    name:"Nemis"
+    eno:091,
+}console.log(user.name); //Nemis
+
+To add new key value pair 
+obj_nm.key = value;
+
+To delete 
+delete obj_nm.key;
+______________________________________________________________________________________________________________________________________________________________________
+Increment & Decrement 
+++a : Pre-Increment
+a++ : Post-Increment
+
+--a : Pre-Decrement
+a-- : Post-Decrement
+______________________________________________________________________________________________________________________________________________________________________
+Comparison operators
+== , === ,!= ,!== ,< ,> ,>= ,<=
+______________________________________________________________________________________________________________________________________________________________________
+Logical operators
+&& , || , !
+______________________________________________________________________________________________________________________________________________________________________
+if statement
+syntax : if(condition){
+             suite...
+            }
+______________________________________________________________________________________________________________________________________________________________________
+if...else
+syntax : if(condition){
+                suite
+        }
+        else{
+                suite
+        }
+______________________________________________________________________________________________________________________________________________________________________
+if..else if...else
+syntax : if(condition){
+            suite
+        }
+        else if(condition){
+            suite
+        }
+        else{
+            suite
+        }
+______________________________________________________________________________________________________________________________________________________________________
+Ternary operator
+syntax : var var_nm = (condition)? value1 : value2
+Ex.    : var msg = temperature < 0 ? "cold" : "hot";
+______________________________________________________________________________________________________________________________________________________________________
+Switch statement
+syntax : switch(value){
+            case 0: 
+                block of code
+                break;
+            case 1:
+                block of code 
+                break;
+                    .
+                    .
+            case n:
+                block of code 
+                break;
+            default :
+                block of code
+                break;
+        }
+______________________________________________________________________________________________________________________________________________________________________
+While loop
+syntax  : While(condition){
+            block of code
+            Increment / Decrement
+          }
+______________________________________________________________________________________________________________________________________________________________________
+Do while 
+syntax : do { 
+        block of code
+        }while(condition);
+______________________________________________________________________________________________________________________________________________________________________
+for loop
+syntax  : for(intialization;condition;increment){
+                block of code
+          }
+for loop in array
+ex.  var name = ["a","b","c","d"]
+     for (index in name){
+        console.log("Hello "+names[index]);
+     }
+output :  Hello a
+            .
+            .
+          Hello d
+______________________________________________________________________________________________________________________________________________________________________
+functions 
+->Block of code to execute specific task
+syntax : function fun_nm(arg1,arg2){
+            code to perform task
+         }
+ex.    : function display(name, lastname){
+            console.log(`${name} ${lastname}`);
+         }
+function call  : display(nemis,ruparel);
+______________________________________________________________________________________________________________________________________________________________________
+Document Object Model 
+->DOM is an interface that represents how our HTML documents are read by browser
+-> It allows JavaScript to manipulate, structure, and style the website.
+
+->After the browser reads your HTML document, it creates a representational tree     called the Document Object Model and defines how that tree can be accessed.
+______________________________________________________________________________________________________________________________________________________________________
+
+Events : 
+
+onclick event :
+<button type="button"
+onclick="alert('You Clicked..!');">
+        Click Me...!
+<button>
+______________________________________________________________________________________________________________________________________________________________________
+
+onmouseover :
+    <a href="https://google.com/"onmouseover="alert('Open Google ..? ');">over on me..!</a>
+______________________________________________________________________________________________________________________________________________________________________
+
+onkeypress : 
+    <input type="text" name="" id=""onkeypress="console.log('User Typed')">
+______________________________________________________________________________________________________________________________________________________________________
+
+onload : 
+    <body onload="console.log('Page Loaded');">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam modi id esse repellat animi, quisquam, accusamus vel ullam magni asperiores fugiat, laboriosam debitis consequatur cum. Corporis nam ratione maiores dignissimos!
+    </p>
+______________________________________________________________________________________________________________________________________________________________________
+
+onresize :
+    window.onresize = function(){
+    var width = window.outerWidth;
+    var height = window.outerHeight;
+    console.log(`Window Size : width = ${width},Height = ${height}`);
+    };
+______________________________________________________________________________________________________________________________________________________________________
+Selectors : 
+->allow to select and modify elements in HTML
+->used to add effectslike show,hide,animations....
+______________________________________________________________________________________________________________________________________________________________________
+document.documentElement property
+console.log(document.head.firstElementChild.nodeName);
+______________________________________________________________________________________________________________________________________________________________________
+document.getElementbyId
+var element = document.getElementById("par");
+    element.style.background="purple";
+______________________________________________________________________________________________________________________________________________________________________
+to print element in console : 
+var elements = document.getElementsByClassName("test");
+for (element of elements){
+    console.log(element);
+} 
+______________________________________________________________________________________________________________________________________________________________________
+to style tags
+var paragraphs = document.getElementsByTagName("p");
+for(paragraph of paragraphs){
+    paragraph.style.background = "red";
+}
