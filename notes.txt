@@ -242,3 +242,76 @@ var paragraphs = document.getElementsByTagName("p");
 for(paragraph of paragraphs){
     paragraph.style.background = "red";
 }
+______________________________________________________________________________________________________________________________________________________________________
+Elements Styling
+var element = document.getElementById("paragraph");
+element.style.color = "red";
+element.style.backgroundColor = "aqua";
+element.style.border = "1px solid black";
+______________________________________________________________________________________________________________________________________________________________________
+to get style information :
+console.log(element.style.color);
+______________________________________________________________________________________________________________________________________________________________________
+to get attribute : 
+var link =document.getElementById("link");
+var href = link.getAttribute("href");
+console.log(href);
+
+var target = link.getAttribute("target");
+console.log(target);
+______________________________________________________________________________________________________________________________________________________________________
+to remove attribute : 
+var link =document.getElementById("link");
+var href = link.removeAttribute("href");
+______________________________________________________________________________________________________________________________________________________________________
+to set attribute : 
+var link =document.getElementById("link");
+var href = link.setAttribute("href","https://web.whatsapp.com/");
+______________________________________________________________________________________________________________________________________________________________________
+Manipulation
+Adding New Elements
+var newDiv = document.createElement("p");
+
+var newcontent  = document.createTextNode("HowAreYou");
+
+newDiv.appendChild(newcontent);
+var currentDiv = document.getElementById("main");
+document.body.appendChild(newDiv,currentDiv);
+
+Width & Height
+var width = window.innerWidth;
+var height = window.innerHeight;
+
+console.log(`Width: ${width}, height: ${height}`);
+
+Screen's Height & Width :
+var width = screen.width;
+var height = screen.height;
+
+Location
+var url = window.location.href;
+
+console.log(url);
+//outputs: browser adress
+
+fir different parts : 
+console.log(window.location.protocol); 
+//outputs: https:
+
+console.log(window.location.hostname);
+//outputs: 127.0.0.1
+  
+console.log(window.location.pathname);
+//outputs: pathname like /index.html
+
+To load new documents
+function loadCSSPage() {
+    window.location.assign("https://wildlearner.com/css");
+}
+
+History
+Number of Pages : 
+The window.history.length property can be used to get the number of pages in the session history of the browser for the current window. It also includes the currently loaded page.
+
+var numberOfpagesVisited = history.length;
+console.log(numberOfpagesVisited);
